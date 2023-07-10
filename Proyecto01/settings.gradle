@@ -1,0 +1,3 @@
+rootProject.name = 'Proyecto01'
+include "usuario-service"
+include "hotel-service"
