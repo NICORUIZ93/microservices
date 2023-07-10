@@ -1,0 +1,15 @@
+package com.microservice.hotelservice.service;
+
+import com.microservice.hotelservice.entity.Hotel;
+
+import java.util.List;
+
+public interface HotelService {
+
+    Hotel create(Hotel hotel);
+
+    List<Hotel> getAll();
+
+    Hotel get(Long id);
+
+}

@@ -9,15 +9,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/usuario-service" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/usuario-service" />
-        <option name="gradleJvm" value="#JAVA_HOME" />
-        <option name="modules">
-          <set>
+            <option value="$PROJECT_DIR$/hotel-service" />
             <option value="$PROJECT_DIR$/usuario-service" />
           </set>
         </option>
