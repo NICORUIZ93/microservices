@@ -1,9 +1,9 @@
 package com.microservice.usuarioservice.service.impl;
 
 import com.microservice.usuarioservice.entity.Usuario;
+import com.microservice.usuarioservice.exceptions.ResourceNotFoundException;
 import com.microservice.usuarioservice.repository.UsuarioRepository;
 import com.microservice.usuarioservice.service.UsuarioService;
-import com.msvc.usuario.exceptions.ResourceNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

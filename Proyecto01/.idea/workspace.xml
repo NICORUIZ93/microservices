@@ -5,20 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="093b5619-f82d-4fa7-909f-224c0e1df6e4" name="Changes" comment="user-service">
-      <change afterPath="$PROJECT_DIR$/hotel-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hotel-service/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hotel-service/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hotel-service/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hotel-service/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hotel-service/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hotel-service/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hotel-service/src/main/java/com/microservice/hotelservice/HotelServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hotel-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hotel-service/src/test/java/com/microservice/hotelservice/HotelServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario-service/src/main/java/com/microservice/usuarioservice/exceptions/GlobalExceptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario-service/src/main/java/com/microservice/usuarioservice/exceptions/GlobalExceptionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario-service/src/main/java/com/microservice/usuarioservice/exceptions/ResourceNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario-service/src/main/java/com/microservice/usuarioservice/exceptions/ResourceNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario-service/src/main/java/com/microservice/usuarioservice/response/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario-service/src/main/java/com/microservice/usuarioservice/response/ApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario-service/src/main/java/com/microservice/usuarioservice/service/impl/UsuarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario-service/src/main/java/com/microservice/usuarioservice/service/impl/UsuarioServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,14 +36,12 @@
         <task path="$PROJECT_DIR$/usuario-service">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/hotel-service">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Proyecto01" type="f1a62948:ProjectNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -78,6 +67,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2SOGw8c2I7pLiQktRfUtX9Dq5gv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -99,13 +91,17 @@
     "WebServerToolWindowFactoryState": "false",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "19",
-    "last_opened_file_path": "C:/Users/nicol/OneDrive/Documentos/Proyectos/Microservices/Proyecto01/hotel-service",
+    "last_opened_file_path": "C:/Users/nicol/Downloads/desarrollo-microservicios",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "24d0ea8e6501aa34dfa2898e43f01d51",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -115,28 +111,18 @@
     ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nicol\OneDrive\Documentos\Proyectos\Microservices\Proyecto01\hotel-service\src\main\java\com\microservice\hotelservice" />
+      <recent name="C:\Users\nicol\OneDrive\Documentos\Proyectos\Microservices\Proyecto01\usuario-service\src\main\java\com\microservice\usuarioservice" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
-  </component>
-  <component name="RunManager" selected="Spring Boot.HotelServiceApplication">
-    <configuration name="HotelServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="Proyecto01.hotel-service.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microservice.hotelservice.HotelServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UsuarioServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="Proyecto01.usuario-service.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microservice.usuarioservice.UsuarioServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -148,7 +134,8 @@
       <updated>1689010449388</updated>
       <workItem from="1689010450383" duration="366000" />
       <workItem from="1689011212169" duration="1494000" />
-      <workItem from="1689012725807" duration="1179000" />
+      <workItem from="1689012725807" duration="3685000" />
+      <workItem from="1689016431967" duration="213000" />
     </task>
     <task id="LOCAL-00001" summary="user-service">
       <option name="closed" value="true" />
@@ -166,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689013022005</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="user-service">
+      <option name="closed" value="true" />
+      <created>1689015853367</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1689015853367</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

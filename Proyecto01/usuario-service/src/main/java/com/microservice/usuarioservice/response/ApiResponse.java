@@ -1,4 +1,4 @@
-package com.msvc.usuario.response;
+package com.microservice.usuarioservice.response;
 
 import lombok.*;
 import org.springframework.http.HttpStatus;

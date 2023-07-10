@@ -1,4 +1,4 @@
-package com.msvc.usuario.exceptions;
+package com.microservice.usuarioservice.exceptions;
 
 public class ResourceNotFoundException extends RuntimeException {
 

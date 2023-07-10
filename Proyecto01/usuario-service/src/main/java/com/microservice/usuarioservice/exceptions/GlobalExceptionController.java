@@ -1,6 +1,7 @@
-package com.msvc.usuario.exceptions;
+package com.microservice.usuarioservice.exceptions;
 
-import com.msvc.usuario.response.ApiResponse;
+import com.microservice.hotelservice.exceptions.ResourceNotFoundException;
+import com.microservice.usuarioservice.response.ApiResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
