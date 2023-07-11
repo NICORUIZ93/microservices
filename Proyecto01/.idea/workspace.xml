@@ -4,27 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="093b5619-f82d-4fa7-909f-224c0e1df6e4" name="Changes" comment="Modular proyect refactor">
-      <change afterPath="$PROJECT_DIR$/registry-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/registry-service/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/registry-service/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/registry-service/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/registry-service/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/registry-service/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/registry-service/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/registry-service/src/main/java/com/microservice/registryservice/RegistryServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calificacion-service/src/main/java/com/microservice/calificacion/controllers/CalificacionesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/calificacion-service/src/main/java/com/microservice/calificacion/controllers/CalificacionesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calificacion-service/src/main/java/com/microservice/calificacion/entities/Calificacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/calificacion-service/src/main/java/com/microservice/calificacion/entities/Calificacion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hotel-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-service/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuario-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/usuario-service/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuario-service/src/main/java/com/microservice/usuarioservice/exceptions/GlobalExceptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario-service/src/main/java/com/microservice/usuarioservice/exceptions/GlobalExceptionController.java" afterDir="false" />
-    </list>
+    <list default="true" id="093b5619-f82d-4fa7-909f-224c0e1df6e4" name="Changes" comment="Modular proyect refactor" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -128,7 +108,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.33678162",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "spring.configuration.checksum": "9481ce57ee9b909a8d6b5bdb0f5f79b3",
     "vue.rearranger.settings.migration": "true"
   },
@@ -264,7 +244,7 @@
       <workItem from="1689011212169" duration="1494000" />
       <workItem from="1689012725807" duration="3685000" />
       <workItem from="1689016431967" duration="23649000" />
-      <workItem from="1689053407603" duration="1646000" />
+      <workItem from="1689053407603" duration="1989000" />
     </task>
     <task id="LOCAL-00001" summary="user-service">
       <option name="closed" value="true" />
@@ -314,7 +294,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689055050845</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Modular proyect refactor">
+      <option name="closed" value="true" />
+      <created>1689055258044</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1689055258044</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,6 +322,9 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/registry-service" />
+    </ignored-roots>
     <MESSAGE value="user-service" />
     <MESSAGE value="calificaciones" />
     <MESSAGE value="Modular proyect refactor" />
