@@ -60,7 +60,6 @@ public class UsuarioServiceImpl implements UsuarioService {
             return calificacion;
         }).collect(Collectors.toList());
 
-        logger.info("{}", calificacionesUsuario);
         usuario.setCalificaciones(listaCalificacion);
         return usuario;
     }
