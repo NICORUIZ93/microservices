@@ -1,4 +1,4 @@
-package com.microservice.usuarioservice.entity;
+package com.microservice.usuarioservice.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

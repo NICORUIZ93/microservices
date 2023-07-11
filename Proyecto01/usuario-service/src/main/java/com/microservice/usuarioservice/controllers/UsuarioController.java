@@ -1,6 +1,6 @@
 package com.microservice.usuarioservice.controllers;
 
-import com.microservice.usuarioservice.entity.Usuario;
+import com.microservice.usuarioservice.entities.Usuario;
 import com.microservice.usuarioservice.service.UsuarioService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
