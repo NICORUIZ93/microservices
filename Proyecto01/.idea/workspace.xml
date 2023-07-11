@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="093b5619-f82d-4fa7-909f-224c0e1df6e4" name="Changes" comment="calificaciones">
+    <list default="true" id="093b5619-f82d-4fa7-909f-224c0e1df6e4" name="Changes" comment="Modular proyect refactor">
       <change afterPath="$PROJECT_DIR$/registry-service/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/registry-service/build.gradle" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/registry-service/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
@@ -23,6 +23,7 @@
       <change beforePath="$PROJECT_DIR$/hotel-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-service/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/usuario-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/usuario-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario-service/src/main/java/com/microservice/usuarioservice/exceptions/GlobalExceptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario-service/src/main/java/com/microservice/usuarioservice/exceptions/GlobalExceptionController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,12 +61,7 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Proyecto01" type="f1a62948:ProjectNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -81,7 +77,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/registry-service" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -268,7 +264,7 @@
       <workItem from="1689011212169" duration="1494000" />
       <workItem from="1689012725807" duration="3685000" />
       <workItem from="1689016431967" duration="23649000" />
-      <workItem from="1689053407603" duration="1254000" />
+      <workItem from="1689053407603" duration="1646000" />
     </task>
     <task id="LOCAL-00001" summary="user-service">
       <option name="closed" value="true" />
@@ -310,7 +306,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689045719929</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Modular proyect refactor">
+      <option name="closed" value="true" />
+      <created>1689055050845</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1689055050845</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,7 +336,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="user-service" />
     <MESSAGE value="calificaciones" />
-    <option name="LAST_COMMIT_MESSAGE" value="calificaciones" />
+    <MESSAGE value="Modular proyect refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modular proyect refactor" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
