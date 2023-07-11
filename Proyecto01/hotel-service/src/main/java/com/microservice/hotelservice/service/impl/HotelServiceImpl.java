@@ -4,19 +4,24 @@ import com.microservice.hotelservice.entity.Hotel;
 import com.microservice.hotelservice.exceptions.ResourceNotFoundException;
 import com.microservice.hotelservice.repository.HotelRepository;
 import com.microservice.hotelservice.service.HotelService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class HotelServiceImpl implements HotelService {
 
-    @Autowired
-    private HotelRepository hotelRepository;
+    private final HotelRepository hotelRepository;
+
+    public HotelServiceImpl(HotelRepository hotelRepository) {
+        this.hotelRepository = hotelRepository;
+    }
 
     @Override
     public Hotel create(Hotel hotel) {
+        String hotelId = UUID.randomUUID().toString();
+        hotel.setId(hotelId);
         return hotelRepository.save(hotel);
     }
 
@@ -27,7 +32,7 @@ public class HotelServiceImpl implements HotelService {
 
 
     @Override
-    public Hotel get(Long id) {
+    public Hotel get(String id) {
         return hotelRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Hotel no encontrado con el ID : " + id));
     }
 }

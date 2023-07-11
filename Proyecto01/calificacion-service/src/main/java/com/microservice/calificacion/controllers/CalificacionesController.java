@@ -29,13 +29,13 @@ public class CalificacionesController {
     }
 
     @GetMapping("usuarios/{usuarioId}")
-    public ResponseEntity<List<Calificacion>> getAllCalificacionByUserId(@PathVariable Long usuarioId) {
+    public ResponseEntity<List<Calificacion>> getAllCalificacionByUserId(@PathVariable String usuarioId) {
         System.out.println(usuarioId);
         return new ResponseEntity<>(calificacionService.getCalificacionesByUserId(usuarioId), HttpStatus.OK);
     }
 
     @GetMapping("hoteles/{hotelId}")
-    public ResponseEntity<List<Calificacion>> getAllCalificacionByHotelId(@PathVariable Long hotelId) {
+    public ResponseEntity<List<Calificacion>> getAllCalificacionByHotelId(@PathVariable String hotelId) {
         return new ResponseEntity<>(calificacionService.getCalificacionesByHotelId(hotelId), HttpStatus.OK);
     }
 }

@@ -10,6 +10,6 @@ public interface HotelService {
 
     List<Hotel> getAll();
 
-    Hotel get(Long id);
+    Hotel get(String id);
 
 }

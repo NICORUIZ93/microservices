@@ -10,6 +10,6 @@ public interface UsuarioService {
 
     List<Usuario> getAllUsuarios();
 
-    Usuario getUsuario(Long usuarioId);
+    Usuario getUsuario(String usuarioId);
 
 }

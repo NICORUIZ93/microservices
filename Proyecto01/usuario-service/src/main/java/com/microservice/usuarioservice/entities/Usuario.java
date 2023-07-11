@@ -5,6 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -13,8 +16,7 @@ import lombok.NoArgsConstructor;
 public class Usuario {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Column(name = "id")
     private String usuarioId;
 
     @Column(name = "nombre", length = 20)
@@ -25,5 +27,8 @@ public class Usuario {
 
     @Column(name = "informacion")
     private String informacion;
+
+    @Transient
+    private List<Calificacion> calificaciones = new ArrayList<>();
 
 }

@@ -9,7 +9,7 @@ public interface CalificacionService {
 
     List<Calificacion> getCalificaciones();
 
-    List<Calificacion> getCalificacionesByUserId(Long usuarioId);
+    List<Calificacion> getCalificacionesByUserId(String usuarioId);
 
-    List<Calificacion> getCalificacionesByHotelId(Long hotelId);
+    List<Calificacion> getCalificacionesByHotelId(String hotelId);
 }

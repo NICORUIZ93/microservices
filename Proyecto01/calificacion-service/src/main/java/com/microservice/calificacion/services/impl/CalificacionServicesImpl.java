@@ -27,12 +27,12 @@ public class CalificacionServicesImpl implements CalificacionService {
     }
 
     @Override
-    public List<Calificacion> getCalificacionesByUserId(Long usuarioId) {
-        return calificacionRepository.findByUsuarioId(usuarioId);
+    public List<Calificacion> getCalificacionesByUserId(String usuarioId) {
+        return calificacionRepository.findByUsuarioId(Long.valueOf(usuarioId));
     }
 
     @Override
-    public List<Calificacion> getCalificacionesByHotelId(Long hotelId) {
-        return calificacionRepository.findByHotelId(hotelId);
+    public List<Calificacion> getCalificacionesByHotelId(String hotelId) {
+        return calificacionRepository.findByHotelId(Long.valueOf(hotelId));
     }
 }
