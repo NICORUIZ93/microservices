@@ -1,6 +1,5 @@
 package com.microservice.usuarioservice.exceptions;
 
-import com.microservice.hotelservice.exceptions.ResourceNotFoundException;
 import com.microservice.usuarioservice.response.ApiResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

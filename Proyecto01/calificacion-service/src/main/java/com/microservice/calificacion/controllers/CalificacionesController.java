@@ -19,17 +19,18 @@ public class CalificacionesController {
     }
 
     @PostMapping
-    public ResponseEntity<Calificacion> saveCalificacion(Calificacion calificacion) {
+    public ResponseEntity<Calificacion> saveCalificacion(@RequestBody Calificacion calificacion) {
         return new ResponseEntity<>(calificacionService.create(calificacion), HttpStatus.CREATED);
     }
 
     @GetMapping()
-    public ResponseEntity<List<Calificacion>> getAllCalificacion(Calificacion calificacion) {
+    public ResponseEntity<List<Calificacion>> getAllCalificacion() {
         return new ResponseEntity<>(calificacionService.getCalificaciones(), HttpStatus.OK);
     }
 
     @GetMapping("usuarios/{usuarioId}")
     public ResponseEntity<List<Calificacion>> getAllCalificacionByUserId(@PathVariable Long usuarioId) {
+        System.out.println(usuarioId);
         return new ResponseEntity<>(calificacionService.getCalificacionesByUserId(usuarioId), HttpStatus.OK);
     }
 

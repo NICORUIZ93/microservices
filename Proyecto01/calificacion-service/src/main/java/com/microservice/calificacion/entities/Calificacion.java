@@ -13,6 +13,6 @@ public class Calificacion {
     private String id;
     private Long usuarioId;
     private Long hotelId;
-    private Long calificacion;
+    private int calificacion;
     private String observaciones;
 }
