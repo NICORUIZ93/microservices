@@ -7,6 +7,6 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/NICORUIZ93/microservices/tree/9db54be5740c480c2e11c160d2149d7c60380088/Proyecto01
+          uri: https://github.com/NICORUIZ93/microservices.git
           clone-on-start: true
 
