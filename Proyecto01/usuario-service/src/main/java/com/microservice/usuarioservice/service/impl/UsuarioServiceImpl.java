@@ -4,11 +4,11 @@ import com.microservice.usuarioservice.entities.Calificacion;
 import com.microservice.usuarioservice.entities.Hotel;
 import com.microservice.usuarioservice.entities.Usuario;
 import com.microservice.usuarioservice.exceptions.ResourceNotFoundException;
+import com.microservice.usuarioservice.external.services.HotelService;
 import com.microservice.usuarioservice.repository.UsuarioRepository;
 import com.microservice.usuarioservice.service.UsuarioService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -24,9 +24,12 @@ public class UsuarioServiceImpl implements UsuarioService {
     private final RestTemplate restTemplate;
     private final Logger logger = LoggerFactory.getLogger(UsuarioService.class);
 
-    public UsuarioServiceImpl(UsuarioRepository usuarioRepository, RestTemplate restTemplate) {
+    private final HotelService hotelService;
+
+    public UsuarioServiceImpl(UsuarioRepository usuarioRepository, RestTemplate restTemplate, HotelService hotelService) {
         this.usuarioRepository = usuarioRepository;
         this.restTemplate = restTemplate;
+        this.hotelService = hotelService;
     }
 
     @Override
@@ -48,13 +51,11 @@ public class UsuarioServiceImpl implements UsuarioService {
         Usuario usuario = usuarioRepository.findById(usuarioId)
                 .orElseThrow(() -> new ResourceNotFoundException("Usuario no encontrado con el ID : " + usuarioId));
 
-        Calificacion[] calificacionesUsuario = restTemplate.getForObject("http://localhost:8083/calificaciones/usuarios/" + usuario.getUsuarioId(), Calificacion[].class);
+        Calificacion[] calificacionesUsuario = restTemplate.getForObject("http://CALIFICACION-SERVICE/calificaciones/usuarios/" + usuario.getUsuarioId(), Calificacion[].class);
         List<Calificacion> calificaciones = Arrays.stream(calificacionesUsuario).collect(Collectors.toList());
         List<Calificacion> listaCalificacion = calificaciones.stream().map(calificacion -> {
             System.out.println(calificacion.getHotelId());
-            ResponseEntity<Hotel> responseEntity = restTemplate.getForEntity("http://localhost:8082/hoteles/" + calificacion.getHotelId(), Hotel.class);
-            Hotel hotel = responseEntity.getBody();
-            logger.info("Respuesta con codigo de estado: {}", responseEntity.getStatusCode());
+            Hotel hotel = hotelService.getHotel(calificacion.getHotelId());
             calificacion.setHotel(hotel);
             return calificacion;
         }).collect(Collectors.toList());

@@ -4,19 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="093b5619-f82d-4fa7-909f-224c0e1df6e4" name="Changes" comment="Modular proyect refactor">
+    <list default="true" id="093b5619-f82d-4fa7-909f-224c0e1df6e4" name="Changes" comment="Eureka">
+      <change afterPath="$PROJECT_DIR$/api-gateway/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/microservice/apigateway/ApiGatewayApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/test/java/com/microservice/apigateway/ApiGatewayApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usuario-service/src/main/java/com/microservice/usuarioservice/external/services/CalificacionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usuario-service/src/main/java/com/microservice/usuarioservice/external/services/HotelService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/calificacion-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/calificacion-service/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calificacion-service/src/main/java/com/microservice/calificacion/CalificacionServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/calificacion-service/src/main/java/com/microservice/calificacion/CalificacionServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calificacion-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/calificacion-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hotel-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-service/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hotel-service/src/main/java/com/microservice/hotelservice/HotelServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-service/src/main/java/com/microservice/hotelservice/HotelServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hotel-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/usuario-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/usuario-service/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/usuario-service/src/main/java/com/microservice/usuarioservice/UsuarioServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario-service/src/main/java/com/microservice/usuarioservice/UsuarioServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuario-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/usuario-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario-service/src/main/java/com/microservice/usuarioservice/config/Myconfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario-service/src/main/java/com/microservice/usuarioservice/config/Myconfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario-service/src/main/java/com/microservice/usuarioservice/service/impl/UsuarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario-service/src/main/java/com/microservice/usuarioservice/service/impl/UsuarioServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +38,13 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+    <projectState path="$PROJECT_DIR$/api-gateway">
+      <ProjectState />
+    </projectState>
     <projectState path="$PROJECT_DIR$/calificacion-service">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/config-server">
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/hotel-service">
@@ -59,17 +76,6 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Proyecto01" type="f1a62948:ProjectNode" />
               </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Proyecto01" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Proyecto01" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
             </expand>
             <select />
           </tree_state>
@@ -80,13 +86,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/api-gateway" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -154,6 +160,9 @@
       <recent name="C:\Users\nicol\OneDrive\Documentos\Proyectos\Microservices\Proyecto01\hotel-service\src\main\java\com\microservice\hotelservice" />
       <recent name="C:\Users\nicol\OneDrive\Documentos\Proyectos\Microservices\Proyecto01\usuario-service\src\main\java\com\microservice\usuarioservice" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.microservice.usuarioservice.entities" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -167,7 +176,29 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.Proyecto01 [buildDependents]">
+  <component name="RunManager" selected="HTTP Request.UsuarioServiceApplication | #3">
+    <configuration name="Proyecto01 [bootBuildImage]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootBuildImage" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
     <configuration name="Proyecto01 [buildDependents]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -234,49 +265,15 @@
       <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="Proyecto01 [resolveMainClassName]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="resolveMainClassName" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
+    <configuration name="UsuarioServiceApplication | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/UsuarioServiceApplication.http" index="3" requestIdentifier="#3" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="Proyecto01 [resolveTestMainClassName]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="resolveTestMainClassName" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
-      <method v="2" />
+    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="api-gateway.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.microservice.apigateway.ApiGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="CalificacionServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="Proyecto01.calificacion-service.main" />
@@ -313,11 +310,12 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Gradle.Proyecto01 [bootBuildImage]" />
       <item itemvalue="Gradle.Proyecto01 [buildDependents]" />
       <item itemvalue="Gradle.Proyecto01 [buildNeeded]" />
       <item itemvalue="Gradle.Proyecto01 [jar]" />
-      <item itemvalue="Gradle.Proyecto01 [resolveMainClassName]" />
-      <item itemvalue="Gradle.Proyecto01 [resolveTestMainClassName]" />
+      <item itemvalue="HTTP Request.UsuarioServiceApplication | #3" />
+      <item itemvalue="Spring Boot.ApiGatewayApplication" />
       <item itemvalue="Spring Boot.RegistryServiceApplication" />
       <item itemvalue="Spring Boot.CalificacionServiceApplication" />
       <item itemvalue="Spring Boot.HotelServiceApplication" />
@@ -325,11 +323,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.UsuarioServiceApplication | #3" />
+        <item itemvalue="Gradle.Proyecto01 [bootBuildImage]" />
         <item itemvalue="Gradle.Proyecto01 [buildDependents]" />
         <item itemvalue="Gradle.Proyecto01 [buildNeeded]" />
         <item itemvalue="Gradle.Proyecto01 [jar]" />
-        <item itemvalue="Gradle.Proyecto01 [resolveTestMainClassName]" />
-        <item itemvalue="Gradle.Proyecto01 [resolveMainClassName]" />
       </list>
     </recent_temporary>
   </component>
@@ -345,7 +343,7 @@
       <workItem from="1689011212169" duration="1494000" />
       <workItem from="1689012725807" duration="3685000" />
       <workItem from="1689016431967" duration="23649000" />
-      <workItem from="1689053407603" duration="6063000" />
+      <workItem from="1689053407603" duration="17233000" />
     </task>
     <task id="LOCAL-00001" summary="user-service">
       <option name="closed" value="true" />
@@ -411,7 +409,23 @@
       <option name="project" value="LOCAL" />
       <updated>1689055515108</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Eureka">
+      <option name="closed" value="true" />
+      <created>1689060227833</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1689060227833</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Eureka">
+      <option name="closed" value="true" />
+      <created>1689066745230</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1689066745230</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -437,7 +451,8 @@
     <MESSAGE value="user-service" />
     <MESSAGE value="calificaciones" />
     <MESSAGE value="Modular proyect refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modular proyect refactor" />
+    <MESSAGE value="Eureka" />
+    <option name="LAST_COMMIT_MESSAGE" value="Eureka" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
