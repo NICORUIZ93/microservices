@@ -1,6 +1,7 @@
+spring:
   config:
     import: optional:configserver:http://localhost:8085
-
+    
 eureka:
   instance:
     prefer-ip-address: true
