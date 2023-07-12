@@ -6,3 +6,6 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://localhost:8761/eureka
+jwt:
+  secret: Nicolas123Nicolas123Nicolas123Nicolas123
+  exp: 3600000
