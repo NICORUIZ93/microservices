@@ -31,6 +31,7 @@ public class Usuario {
     private String informacion;
 
     @Transient
+    @Builder.Default
     private List<Calificacion> calificaciones = new ArrayList<>();
 
 }

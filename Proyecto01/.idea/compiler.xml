@@ -9,6 +9,7 @@
         </processorPath>
         <module name="Proyecto01.api-gateway.main" />
         <module name="Proyecto01.calificacion-service.main" />
+        <module name="Proyecto01.auth-service.main" />
         <module name="Proyecto01.usuario-service.main" />
         <module name="Proyecto01.hotel-service.main" />
       </profile>

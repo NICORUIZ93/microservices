@@ -2,7 +2,7 @@ package com.microservice.usuarioservice.controllers;
 
 import com.microservice.usuarioservice.entities.Usuario;
 import com.microservice.usuarioservice.service.UsuarioService;
-import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.retry.annotation.Retry;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/usuarios")
 public class UsuarioController {
+    int intentos = 1;
 
     private final UsuarioService usuarioService;
 
@@ -34,8 +35,10 @@ public class UsuarioController {
     }
 
     @GetMapping("/{usuarioId}")
-    @CircuitBreaker(name = "ratingHotelBreaker", fallbackMethod = "ratingHotelFallback")
+    // @CircuitBreaker(name = "ratingHotelBreaker", fallbackMethod = "ratingHotelFallback")
+    @Retry(name = "ratingHotelBreaker", fallbackMethod = "ratingHotelFallback")
     public ResponseEntity<Usuario> obtenerUsuario(@PathVariable String usuarioId) {
+        log.info("Cantidad de reintentos: {}", intentos++);
         Usuario usuario = usuarioService.getUsuario(usuarioId);
         return ResponseEntity.ok(usuario);
     }
