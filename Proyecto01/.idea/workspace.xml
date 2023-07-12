@@ -4,17 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="093b5619-f82d-4fa7-909f-224c0e1df6e4" name="Changes" comment="Add JWT">
+    <list default="true" id="093b5619-f82d-4fa7-909f-224c0e1df6e4" name="Changes" comment="Add update dependencies">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/calificacion-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/calificacion-service/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config-server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hotel-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-service/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/registry-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/registry-service/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registry-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/registry-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/usuario-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/usuario-service/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,6 +67,17 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Proyecto01" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Proyecto01" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Proyecto01" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -174,13 +186,35 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.Proyecto01 [dependencies]">
-    <configuration name="Proyecto01 [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.Proyecto01 [testClasses]">
+    <configuration name="Proyecto01 [buildDependents]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="buildDependents" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="Proyecto01 [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--stacktrace" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -197,7 +231,7 @@
       <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="Proyecto01 [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Proyecto01 [check]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -208,7 +242,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="clean" />
+            <option value="check" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -219,7 +253,7 @@
       <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="Proyecto01 [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Proyecto01 [testClasses]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -230,7 +264,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="dependencies" />
+            <option value="testClasses" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -241,10 +275,26 @@
       <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="AuthServiceApplication | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/AuthServiceApplication.http" requestIdentifier="#1" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="AuthServiceApplication | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/AuthServiceApplication.http" index="3" requestIdentifier="#3" runType="Run single request">
+    <configuration name="Proyecto01 [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -303,13 +353,13 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Gradle.Proyecto01 [dependencies]" />
+      <item itemvalue="Gradle.Proyecto01 [check]" />
+      <item itemvalue="Gradle.Proyecto01 [testClasses]" />
+      <item itemvalue="Gradle.Proyecto01 [test]" />
+      <item itemvalue="Gradle.Proyecto01 [buildDependents]" />
       <item itemvalue="Gradle.Proyecto01 [build]" />
-      <item itemvalue="Gradle.Proyecto01 [clean]" />
-      <item itemvalue="HTTP Request.AuthServiceApplication | #1" />
-      <item itemvalue="HTTP Request.AuthServiceApplication | #3" />
-      <item itemvalue="Spring Boot.CalificacionServiceApplication" />
       <item itemvalue="Spring Boot.ApiGatewayApplication" />
+      <item itemvalue="Spring Boot.CalificacionServiceApplication" />
       <item itemvalue="Spring Boot.AuthServiceApplication" />
       <item itemvalue="Spring Boot.ConfigServerApplication" />
       <item itemvalue="Spring Boot.RegistryServiceApplication" />
@@ -318,11 +368,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Proyecto01 [dependencies]" />
+        <item itemvalue="Gradle.Proyecto01 [testClasses]" />
+        <item itemvalue="Gradle.Proyecto01 [buildDependents]" />
+        <item itemvalue="Gradle.Proyecto01 [check]" />
+        <item itemvalue="Gradle.Proyecto01 [test]" />
         <item itemvalue="Gradle.Proyecto01 [build]" />
-        <item itemvalue="Gradle.Proyecto01 [clean]" />
-        <item itemvalue="HTTP Request.AuthServiceApplication | #1" />
-        <item itemvalue="HTTP Request.AuthServiceApplication | #3" />
       </list>
     </recent_temporary>
   </component>
@@ -341,7 +391,7 @@
       <workItem from="1689053407603" duration="21709000" />
       <workItem from="1689100261600" duration="44156000" />
       <workItem from="1689186974111" duration="1575000" />
-      <workItem from="1689188606481" duration="1060000" />
+      <workItem from="1689188606481" duration="12509000" />
     </task>
     <task id="LOCAL-00001" summary="user-service">
       <option name="closed" value="true" />
@@ -495,7 +545,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689187004841</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Add update dependencies">
+      <option name="closed" value="true" />
+      <created>1689189698647</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1689189698647</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -529,7 +587,8 @@
     <MESSAGE value="Add circuitbraker" />
     <MESSAGE value="Add Security" />
     <MESSAGE value="Add JWT" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add JWT" />
+    <MESSAGE value="Add update dependencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add update dependencies" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
