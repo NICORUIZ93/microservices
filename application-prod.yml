@@ -9,3 +9,7 @@ eureka:
 jwt:
   secret: Nicolas123Nicolas123Nicolas123Nicolas123
   exp: 3600000
+
+spring:
+  config:
+    import: optional:configserver:http://localhost:8085
