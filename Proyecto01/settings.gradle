@@ -1,8 +1,8 @@
 rootProject.name = 'Proyecto01'
-include "usuario-service"
-include "hotel-service"
-include "calificacion-service"
-include "registry-service"
-include "api-gateway"
-include "config-server"
-include "auth-service"
+include("usuario-service",
+        "hotel-service",
+        "calificacion-service",
+        "registry-service",
+        "api-gateway",
+        "config-server",
+        "auth-service")

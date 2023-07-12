@@ -1,11 +1,14 @@
-subprojects {
-    apply plugin: 'java'
+plugins {
+    id 'java'
+}
 
-    repositories {
-        mavenCentral()
-    }
+group = 'com.example'
+version = '1.0'
 
-    dependencies {
+repositories {
+    mavenCentral()
+}
 
-    }
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
 }
