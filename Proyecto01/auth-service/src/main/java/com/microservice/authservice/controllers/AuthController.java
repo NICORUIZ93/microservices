@@ -8,6 +8,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.UnsupportedEncodingException;
+
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
@@ -19,15 +21,17 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<TokenDto> login(@RequestBody AuthUserDto dto) {
+    public ResponseEntity<TokenDto> login(@RequestBody AuthUserDto dto) throws UnsupportedEncodingException {
+        System.out.println(dto);
         TokenDto tokenDto = authUserService.login(dto);
-        if (tokenDto == null) {
+        System.out.println("Token: " + tokenDto);
+        if (dto == null) {
             return ResponseEntity.badRequest().build();
         }
         return new ResponseEntity<>(tokenDto, HttpStatus.OK);
     }
 
-    @PostMapping("/validate/{token}")
+    @PostMapping("/validate")
     public ResponseEntity<TokenDto> validate(@RequestParam String token) {
         TokenDto tokenDto = authUserService.validate(token);
         if (tokenDto == null) {

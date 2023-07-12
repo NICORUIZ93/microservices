@@ -7,10 +7,9 @@ import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.io.UnsupportedEncodingException;
 import java.util.Base64;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 
 @Component
 public class JwtProvider {
@@ -19,32 +18,27 @@ public class JwtProvider {
     private String secret;
 
     @Value("${jwt.exp}")
-    private String jwtExp;
+    private Long jwtExp;
 
     @PostConstruct
     protected void init() {
         secret = Base64.getEncoder().encodeToString(secret.getBytes());
     }
 
-    public String createToken(AuthUser authUser) {
-
-        Map<String, Object> claims = new HashMap<>();
-        claims = Jwts.claims().setSubject(authUser.getUserName());
-        claims.put("id", authUser.getId());
-        Date now = new Date();
-        Date exp = new Date(now.getTime() + jwtExp);
-
-        return Jwts.builder()
-                .setClaims(claims)
-                .setExpiration(exp)
-                .setIssuedAt(now)
-                .signWith(SignatureAlgorithm.ES256, secret)
+    public String createToken(AuthUser authUser) throws UnsupportedEncodingException {
+        return Jwts
+                .builder()
+                .setSubject(authUser.getUserName())
+                .setExpiration(new Date(System.currentTimeMillis() + jwtExp))
+                .claim("name", "Nicolas")
+                .claim("scope", "admin")
+                .signWith(SignatureAlgorithm.HS256, secret)
                 .compact();
     }
 
     public boolean validate(String token) {
         try {
-            Jwts.parser().setSigningKey(secret).parseClaimsJwt(token);
+            Jwts.parser().setSigningKey(secret).parseClaimsJws(token);
             return true;
         } catch (Exception exception) {
             return false;
@@ -53,7 +47,7 @@ public class JwtProvider {
 
     public String getUserNameFromToken(String token) {
         try {
-            return Jwts.parser().setSigningKey(secret).parseClaimsJwt(token).getBody().getSubject();
+            return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody().getSubject();
         } catch (Exception exception) {
             return "Bad token";
         }

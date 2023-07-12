@@ -2,7 +2,7 @@ server:
   port: 8086
 
 jwt:
-  secret: Nicolas
+  secret: Nicolas123Nicolas123Nicolas123Nicolas123
   exp: 3600000
 
 spring:

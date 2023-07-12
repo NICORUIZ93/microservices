@@ -8,6 +8,7 @@ import com.microservice.authservice.security.JwtProvider;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.io.UnsupportedEncodingException;
 import java.util.Optional;
 
 @Service
@@ -25,8 +26,8 @@ public class AuthUserService {
 
     public AuthUser save(AuthUserDto authUserDto) {
 
-        Optional<AuthUser> userService = authUserRepository.findByUserName(authUserDto.getUserName());
-        if (userService.isPresent()) {
+        Optional<AuthUser> user = authUserRepository.findByUserName(authUserDto.getUserName());
+        if (user.isPresent()) {
             return null;
         }
         String password = passwordEncoder.encode(authUserDto.getPassword());
@@ -38,13 +39,16 @@ public class AuthUserService {
         return authUserRepository.save(authUser);
     }
 
-    public TokenDto login(AuthUserDto dto) {
+    public TokenDto login(AuthUserDto dto) throws UnsupportedEncodingException {
         Optional<AuthUser> user = authUserRepository.findByUserName(dto.getUserName());
+        System.out.println("login " + user);
         if (!user.isPresent()) {
+            System.out.println("login  !isPresent");
             return null;
         }
 
-        if (passwordEncoder.matches(dto.getPassword(), dto.getUserName())) {
+        if (passwordEncoder.matches(dto.getPassword(), user.get().getPassword())) {
+            System.out.println("login matches");
             return new TokenDto(jwtProvider.createToken(user.get()));
         }
         return null;
@@ -55,8 +59,7 @@ public class AuthUserService {
             return null;
         }
         String userName = jwtProvider.getUserNameFromToken(token);
-
-        if (!authUserRepository.findByUserName(userName).isPresent()) {
+        if (authUserRepository.findByUserName(userName).isEmpty()) {
             return null;
         }
         return new TokenDto(token);
