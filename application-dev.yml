@@ -14,10 +14,6 @@ management:
   health:
     circuitbreakers:
       enable:true
-  endpoints:
-    web:
-      exposure:
-        include: '*'
   metrics:
     distribution:
       percentiles-histogram:
