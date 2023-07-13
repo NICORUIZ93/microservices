@@ -10,3 +10,31 @@ jwt:
   secret: Nicolas123Nicolas123Nicolas123Nicolas123
   exp: 3600000
 
+management:
+  health:
+    circuitbreakers:
+      enable:true
+    endpoints:
+      web:
+        exposure:
+          include: health
+    endpoint:
+      health:
+        show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  metrics:
+    distribution:
+      percentiles-histogram:
+        http:
+          server:
+            requests: true
+  tracing:
+    sampling:
+      probability: 1.0
+
+logging:
+  pattern:
+    console: "%clr(%d{HH:mm:ss.SSS}){red} %clr(%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]){blue} %clr(:){green} %clr(%m){faint}%n"
