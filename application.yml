@@ -1,3 +1,6 @@
+server:
+  port: 0
+  
 eureka:
   instance:
     prefer-ip-address: true
@@ -34,3 +37,23 @@ management:
 logging:
   pattern:
     console: "%clr(%d{HH:mm:ss.SSS}){red} %clr(%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]){blue} %clr(:){green} %clr(%m){faint}%n"
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      ratingHotelBreaker:
+        register-health-indicator: true
+        event-consumer-buffer-size: 10
+        failure-rate-threshold: 50
+        minimum-number-of-calls: 5
+        sliding-window-size: 10
+        automatic-transition-from-open-to-half-open-enabled: true
+        wait-duration-in-open-state: 6s
+        permitted-number-of-calls-in-half-open-state: 3
+        sliding-window-type: count_based
+    retry:
+      instances:
+        ratingHotelService:
+          max-attempts: 3
+          wait-duration: 5s
+
