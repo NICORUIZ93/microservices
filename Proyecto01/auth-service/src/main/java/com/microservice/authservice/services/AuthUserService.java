@@ -1,6 +1,8 @@
 package com.microservice.authservice.services;
 
 import com.microservice.authservice.DTO.AuthUserDto;
+import com.microservice.authservice.DTO.NewUserDto;
+import com.microservice.authservice.DTO.RequestDto;
 import com.microservice.authservice.DTO.TokenDto;
 import com.microservice.authservice.entities.AuthUser;
 import com.microservice.authservice.repository.AuthUserRepository;
@@ -24,17 +26,18 @@ public class AuthUserService {
         this.jwtProvider = jwtProvider;
     }
 
-    public AuthUser save(AuthUserDto authUserDto) {
+    public AuthUser save(NewUserDto dto) {
 
-        Optional<AuthUser> user = authUserRepository.findByUserName(authUserDto.getUserName());
+        Optional<AuthUser> user = authUserRepository.findByUserName(dto.getUserName());
         if (user.isPresent()) {
             return null;
         }
-        String password = passwordEncoder.encode(authUserDto.getPassword());
+        String password = passwordEncoder.encode(dto.getPassword());
         AuthUser authUser = AuthUser
                 .builder()
                 .password(password)
-                .userName(authUserDto.getUserName())
+                .userName(dto.getUserName())
+                .role(dto.getRole())
                 .build();
         return authUserRepository.save(authUser);
     }
@@ -54,8 +57,8 @@ public class AuthUserService {
         return null;
     }
 
-    public TokenDto validate(String token) {
-        if (!jwtProvider.validate(token)) {
+    public TokenDto validate(String token, RequestDto requestDto) {
+        if (jwtProvider.validate(token, requestDto)) {
             return null;
         }
         String userName = jwtProvider.getUserNameFromToken(token);

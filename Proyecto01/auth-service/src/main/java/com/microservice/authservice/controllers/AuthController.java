@@ -1,6 +1,8 @@
 package com.microservice.authservice.controllers;
 
 import com.microservice.authservice.DTO.AuthUserDto;
+import com.microservice.authservice.DTO.NewUserDto;
+import com.microservice.authservice.DTO.RequestDto;
 import com.microservice.authservice.DTO.TokenDto;
 import com.microservice.authservice.entities.AuthUser;
 import com.microservice.authservice.services.AuthUserService;
@@ -32,8 +34,8 @@ public class AuthController {
     }
 
     @PostMapping("/validate")
-    public ResponseEntity<TokenDto> validate(@RequestParam String token) {
-        TokenDto tokenDto = authUserService.validate(token);
+    public ResponseEntity<TokenDto> validate(@RequestParam String token, @RequestBody RequestDto requestDto) {
+        TokenDto tokenDto = authUserService.validate(token, requestDto);
         if (tokenDto == null) {
             return null;
         }
@@ -41,7 +43,7 @@ public class AuthController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity<AuthUser> create(@RequestBody AuthUserDto dto) {
+    public ResponseEntity<AuthUser> create(@RequestBody NewUserDto dto) {
         AuthUser authUser = authUserService.save(dto);
         if (authUser == null) {
             return ResponseEntity.badRequest().build();

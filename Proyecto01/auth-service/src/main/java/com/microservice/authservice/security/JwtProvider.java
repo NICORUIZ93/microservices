@@ -1,5 +1,6 @@
 package com.microservice.authservice.security;
 
+import com.microservice.authservice.DTO.RequestDto;
 import com.microservice.authservice.entities.AuthUser;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -13,12 +14,17 @@ import java.util.Date;
 
 @Component
 public class JwtProvider {
+    private final RouteValidator routeValidator;
 
     @Value("${jwt.secret}")
     private String secret;
 
     @Value("${jwt.exp}")
     private Long jwtExp;
+
+    public JwtProvider(RouteValidator routeValidator) {
+        this.routeValidator = routeValidator;
+    }
 
     @PostConstruct
     protected void init() {
@@ -30,19 +36,19 @@ public class JwtProvider {
                 .builder()
                 .setSubject(authUser.getUserName())
                 .setExpiration(new Date(System.currentTimeMillis() + jwtExp))
-                .claim("name", "Nicolas")
-                .claim("scope", "admin")
+                .claim("id", authUser.getId())
+                .claim("role", authUser.getRole())
                 .signWith(SignatureAlgorithm.HS256, secret)
                 .compact();
     }
 
-    public boolean validate(String token) {
+    public boolean validate(String token, RequestDto requestDto) {
         try {
-            Jwts.parser().setSigningKey(secret).parseClaimsJws(token);
-            return true;
+            Jwts.parser().setSigningKey(secret).parseClaimsJwt(token);
         } catch (Exception exception) {
             return false;
         }
+        return isAdmin(token) || !routeValidator.isAdmin(requestDto);
     }
 
     public String getUserNameFromToken(String token) {
@@ -51,5 +57,14 @@ public class JwtProvider {
         } catch (Exception exception) {
             return "Bad token";
         }
+    }
+
+
+    public boolean isAdmin(String token) {
+        return (Jwts.parser().setSigningKey(secret))
+                .parseClaimsJwt(token)
+                .getBody()
+                .get("role")
+                .equals("admin");
     }
 }

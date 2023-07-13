@@ -18,8 +18,6 @@ spring:
     name: USUARIO-SERVICE
   config:
     import: optional:configserver:http://localhost:8085
-  profiles:
-    active:
 
 management:
   health:
