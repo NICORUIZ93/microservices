@@ -11,6 +11,10 @@ jwt:
   exp: 3600000
 
 management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
   health:
     circuitbreakers:
       enable:true
