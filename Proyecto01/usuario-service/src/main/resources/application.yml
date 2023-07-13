@@ -20,33 +20,25 @@ spring:
     import: optional:configserver:http://localhost:8085
 
 management:
+  endpoint:
+    prometheus:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
   health:
     circuitbreakers:
       enable:true
-    endpoints:
-      web:
-        exposure:
-          include: health
-    endpoint:
-      health:
-        show-details: always
-
-resilience4j:
-  circuitbreaker:
-    instances:
-      ratingHotelBreaker:
-        register-health-indicator: true
-        event-consumer-buffer-size: 10
-        failure-rate-threshold: 50
-        minimum-number-of-calls: 5
-        sliding-window-size: 10
-        automatic-transition-from-open-to-half-open-enabled: true
-        wait-duration-in-open-state: 6s
-        permitted-number-of-calls-in-half-open-state: 3
-        sliding-window-type: count_based
-    retry:
-      instances:
-        ratingHotelService:
-          max-attempts: 3
-          wait-duration: 5s
-
+  metrics:
+    export:
+      prometheus:
+        enable: true
+    distribution:
+      percentiles-histogram:
+        http:
+          server:
+            requests: true
+  tracing:
+    sampling:
+      probability: 1.0

@@ -9,4 +9,4 @@ spring:
         git:
           uri: https://github.com/NICORUIZ93/microservices.git
           clone-on-start: true
-
+      enabled: false
