@@ -14,6 +14,9 @@ jwt:
   exp: 3600000
 
 management:
+  endpoint:
+    prometheus:
+      enabled: true
   endpoints:
     web:
       exposure:
@@ -22,6 +25,9 @@ management:
     circuitbreakers:
       enable:true
   metrics:
+    export:
+      prometheus:
+        enable: true
     distribution:
       percentiles-histogram:
         http:
@@ -31,7 +37,6 @@ management:
     sampling:
       probability: 1.0
 
-      
 logging:
   pattern:
     console: "%clr(%d{HH:mm:ss.SSS}){red} %clr(%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]){blue} %clr(:){green} %clr(%m){faint}%n"
